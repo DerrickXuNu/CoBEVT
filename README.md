@@ -31,7 +31,14 @@ It can be used for **multi-agent** BEV map prediction. The demo below shows our 
 ## Installation
 The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer to the specific folder for more details based on your research purpose.
 
-:point_right: [nuScenes Users](nuScenes/README.md)
+:point_right: [nuScenes Users](nuScenes/README.md) <br/>
 :point_right: [OPV2V Users](opv2v/README.md)
 
 ## Citation
+ ```bibtex
+@inproceedings{xu2022cobevt,
+  author = {Runsheng Xu, Zhengzhong Tu, Hao Xiang, Wei Shao, Bolei Zhou, Jiaqi Ma},
+  title = {CoBEVT: Cooperative Bird's Eye View Semantic Segmentation with Sparse Transformers},
+  booktitle={Conference on Robot Learning (CoRL)},
+  year = {2022}}
+```
