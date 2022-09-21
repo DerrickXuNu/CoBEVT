@@ -17,13 +17,12 @@ map predictions. The core component of CoBEVT, named fused axial
 attention or FAX module,  can capture sparsely local and global spatial interactions across views and agents. We 
 achieve SOTA performance both on [OPV2V](https://mobility-lab.seas.ucla.edu/opv2v/) and [nuScenes](https://www.nuscenes.org/) dataset with **real-time performance**.
 
-### Demo
 <br>
 
 <div align="center"><img src="images/nuscene.gif" width="75%"/></div>
 <div align="center">
 <b>nuScenes demo:</b>
-Our CoBEVT can be used on **single-vehicle multi-camera** semantic BEV Segmentations.
+Our CoBEVT can be used on single-vehicle multi-camera semantic BEV Segmentations.
 </div>
 <br>
 
@@ -32,7 +31,7 @@ Our CoBEVT can be used on **single-vehicle multi-camera** semantic BEV Segmentat
 <div align="center"><img src="images/opv2v.gif" width="75%"/></div>
 <div align="center">
 <b>OPV2V demo:</b>
-Our CoBEVT can also be used for **multi-agent** BEV map prediction.
+Our CoBEVT can also be used for multi-agent BEV map prediction.
 </div>
 <br>
 
