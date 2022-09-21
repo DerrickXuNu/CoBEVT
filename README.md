@@ -11,9 +11,9 @@ UCLA, UT-Austin
 
 <br>
 
-<div align="center"><img src="images/CorpBEVT_Overview-1.png" width="75%"/></div>
+<div align="center"><img src="images/CorpBEVT_Overview-1.png" width="85%"/></div>
 <div align="center">
-<b>Overview of CoBEVT:</b>
+<b>Overview of CoBEVT</b>
 </div>
 <br>
 
