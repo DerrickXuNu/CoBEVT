@@ -20,7 +20,7 @@ achieve SOTA performance both on [OPV2V](https://mobility-lab.seas.ucla.edu/opv2
 ### Demo
 <br>
 
-<div align="center"><img src="images/nuscene.gif" width="100%"/></div>
+<div align="center"><img src="images/nuscene.gif" width="75%"/></div>
 <div align="center">
 <b>nuScenes demo:</b>
 Our CoBEVT can be used on **single-vehicle multi-camera** semantic BEV Segmentations.
