@@ -26,7 +26,14 @@ Our CoBEVT can be used on **single-vehicle multi-camera** semantic BEV Segmentat
 
 It can be used for **multi-agent** BEV map prediction. The demo below shows our result on [OPV2V](https://mobility-lab.seas.ucla.edu/opv2v/).
 
-![teaser](images/opv2v.gif)
+<br>
+
+<div align="center"><img src="images/opv2v.gif" width="75%"/></div>
+<div align="center">
+<b>Map-view Segmentation:</b>
+The model uses multi-view images to produce a map-view segmentation at 45 FPS
+</div>
+<br>
 
 ## Installation
 The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer to the specific folder for more details based on your research purpose.
