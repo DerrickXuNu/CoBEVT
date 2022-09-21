@@ -18,20 +18,21 @@ attention or FAX module,  can capture sparsely local and global spatial interact
 achieve SOTA performance both on [OPV2V](https://mobility-lab.seas.ucla.edu/opv2v/) and [nuScenes](https://www.nuscenes.org/) dataset with **real-time performance**.
 
 ### Demo
-Our CoBEVT can be used on **single-vehicle multi-camera** semantic BEV Segmentations. The demo below shows our result on [nuScenes](https://www.nuscenes.org/).
+<br>
 
-
-
-![teaser](images/nuscene.gif)
-
-It can be used for **multi-agent** BEV map prediction. The demo below shows our result on [OPV2V](https://mobility-lab.seas.ucla.edu/opv2v/).
+<div align="center"><img src="images/nuscene.gif" width="100%"/></div>
+<div align="center">
+<b>nuScenes demo:</b>
+Our CoBEVT can be used on **single-vehicle multi-camera** semantic BEV Segmentations.
+</div>
+<br>
 
 <br>
 
 <div align="center"><img src="images/opv2v.gif" width="75%"/></div>
 <div align="center">
-<b>Map-view Segmentation:</b>
-The model uses multi-view images to produce a map-view segmentation at 45 FPS
+<b>OPV2V demo:</b>
+Our CoBEVT can also be used for **multi-agent** BEV map prediction.
 </div>
 <br>
 
