@@ -9,7 +9,14 @@ This is the official implementation of CoRL2022 paper "CoBEVT: Cooperative Bird'
 
 UCLA, UT-Austin
 
-![teaser](images/CorpBEVT_Overview-1.png)
+<br>
+
+<div align="center"><img src="images/CorpBEVT_Overview-1.png" width="75%"/></div>
+<div align="center">
+<b>Overview of CoBEVT:</b>
+</div>
+<br>
+
 
 ## Introduction
 CoBEVT is the first generic multi-agent multi-camera perception framework that can cooperatively generate BEV
