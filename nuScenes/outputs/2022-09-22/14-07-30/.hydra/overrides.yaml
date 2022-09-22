@@ -1,0 +1,3 @@
+- +experiment=cvt_pyramid_axial_nuscenes_vehicle
+- data.dataset_dir=/home/runshengxu/project/data/nuscenes
+- data.labels_dir=/home/runshengxu/project/data/cvt_labels_nuscenes
