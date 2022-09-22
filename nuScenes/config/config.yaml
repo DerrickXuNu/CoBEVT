@@ -9,7 +9,7 @@ defaults:
   - metrics: default_metrics
 
 experiment:
-  project: cross_view_transformers_wei_test          # wandb project
+  project: cross_view_transformer_pyramid_fax          # wandb project
   uuid: ${now:%m%d_%H%M%S}                            # model name
   save_dir: ${hydra:runtime.cwd}/logs/                # log directory, will be created
 
@@ -18,7 +18,7 @@ experiment:
   log_image_interval: 500
 
 loader:
-  batch_size: 8
+  batch_size: 4 # make sure total batch size is 16
   num_workers: 32
   pin_memory: True
   prefetch_factor: 4
