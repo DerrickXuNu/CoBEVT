@@ -1,0 +1,34 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="12">
+            <item index="0" class="java.lang.String" itemvalue="six" />
+            <item index="1" class="java.lang.String" itemvalue="opencv-python" />
+            <item index="2" class="java.lang.String" itemvalue="matplotlib" />
+            <item index="3" class="java.lang.String" itemvalue="tqdm" />
+            <item index="4" class="java.lang.String" itemvalue="terminado" />
+            <item index="5" class="java.lang.String" itemvalue="python" />
+            <item index="6" class="java.lang.String" itemvalue="tensorflow" />
+            <item index="7" class="java.lang.String" itemvalue="tensorboard" />
+            <item index="8" class="java.lang.String" itemvalue="msgpack-numpy" />
+            <item index="9" class="java.lang.String" itemvalue="pytorch" />
+            <item index="10" class="java.lang.String" itemvalue="dill" />
+            <item index="11" class="java.lang.String" itemvalue="msgpack-python" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+          <option value="N802" />
+          <option value="N812" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
