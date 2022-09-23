@@ -56,3 +56,9 @@ The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer t
   booktitle={Conference on Robot Learning (CoRL)},
   year = {2022}}
 ```
+
+## Acknowledgement
+CoBEVT is build upon [OpenCOOD](https://github.com/DerrickXuNu/OpenCOOD), which is the first Open Cooperative Detection framework for autonomous driving.
+
+Our nuScenes experiments used the training pipeline in [CVT(CVPR2022)](https://github.com/bradyz/cross_view_transformers).
+
