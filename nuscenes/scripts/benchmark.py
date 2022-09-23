@@ -53,6 +53,5 @@ def main(cfg):
     print('average time: %f' % statistics.mean(time_list))
 
 
-
 if __name__ == '__main__':
     main()

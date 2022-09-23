@@ -1,52 +1,21 @@
-# <div align="center">**Cross View Transformers**</div>
+# <div align="center">**CoBEVT nuScenes Track**</div>
 
-<div align="center"><img src="docs/assets/teaser.jpg" width="65%"></div>
-<br>
+This repository contains the source code and data for our CoBEVT nuScenes track. The whole pipeline is based on [CVT(CVPR2022)](https://github.com/bradyz/cross_view_transformers)
 
-This repository contains the source code and data for our paper:
-
-> [**Cross-view Transformers for real-time Map-view Semantic Segmentation**](http://www.philkr.net/media/zhou2022crossview.pdf)  
-> [Brady Zhou](https://www.bradyzhou.com/), [Philipp Kr&auml;henb&uuml;hl](http://www.philkr.net/)  
-> [*CVPR 2022*](https://cvpr2022.thecvf.com/)
-
-## <div align="center">**Demos**</div>
-
-<br>
-
-<div align="center"><img src="docs/assets/predictions.gif" width="75%"/></div>
-<div align="center">
-<b>Map-view Segmentation:</b>
-The model uses multi-view images to produce a map-view segmentation at 45 FPS
-</div>
-<br>
-
-<div align="center"><img src="docs/assets/map.gif" width="40%"/></div>
-<div align="center">
-<b>Map Making:</b>
-With vehicle pose, we can construct a map by fusing model predictions over time
-</div>
-<br>
-
-<div align="center"><img src="docs/assets/attention.gif" width="75%"/></div>
-<div align="center">
-<b>Cross-view Attention:</b>
-For a given map-view location, we show which image patches are being attended to
-</div>
-<br>
 
 ## <div align="center">**Installation**</div>
 
 ```bash
 # Clone repo
-git clone https://github.com/bradyz/cross_view_transformers.git
+git clone https://github.com/DerrickXuNu/CoBEVT.git
 
-cd cross_view_transformers
+cd CoBEVT/nuScenes
 
 # Setup conda environment
-conda create -y --name cvt python=3.8
+conda create -y --name sinbevt python=3.8
 
-conda activate cvt
-conda install -y pytorch torchvision cudatoolkit=11.3 -c pytorch
+conda activate sinbevt
+conda install pytorch==1.11.0 torchvision==0.12.0 cudatoolkit=11.3 -c pytorch
 
 # Install dependencies
 pip install -r requirements.txt
@@ -55,8 +24,6 @@ pip install -e .
 
 ## <div align="center">**Data**</div>
 
-<div align="center"><img src="docs/assets/view_data.gif" width="75%"/></div>
-<br>
 
 Documentation:
 * [Dataset setup](docs/dataset_setup.md)
@@ -69,7 +36,6 @@ Download the original datasets and our generated map-view labels
 | | Dataset | Labels |
 | :-- | :-- | :-- |
 | nuScenes | [keyframes + map expansion](https://www.nuscenes.org/nuscenes#download) (60 GB) | [cvt_labels_nuscenes.tar.gz](https://www.cs.utexas.edu/~bzhou/cvt/cvt_labels_nuscenes.tar.gz) (361 MB) |
-| Argoverse 1.1 | [3D tracking](https://www.argoverse.org/av1.html#download-link) | coming soon™ |
 
 <br/>
 
@@ -124,13 +90,13 @@ python3 scripts/view_data.py \
 <br>
 
 An average job of 50k training iterations takes ~8 hours.  
-Our models were trained using 4 GPU jobs, but also can be trained on single GPU.
+We trained model both on four A5000 and two A100(80G), and we found a total batch size of 16 will get the best results.
 
 To train a model,
 
 ```bash
-python3 scripts/train.py \
-  +experiment=cvt_nuscenes_vehicle
+python scripts/train.py \
+  +experiment=cvt_pyramid_axial_nuscenes_vehicle
   data.dataset_dir=/media/datasets/nuscenes \
   data.labels_dir=/media/datasets/cvt_labels_nuscenes
 ```
@@ -143,25 +109,5 @@ For more information, see
 
 ## <div align="center">**Additional Information**</div>
 
-### **Awesome Related Repos**
-
-* https://github.com/wayveai/fiery
-* https://github.com/nv-tlabs/lift-splat-shoot
-* https://github.com/tom-roddick/mono-semantic-maps
-
-### **License**
-
-This project is released under the [MIT license](LICENSE)
-
-### **Citation**
-
-If you find this project useful for your research, please use the following BibTeX entry.
-
-```bibtex
-@inproceedings{zhou2022cross,
-    title={Cross-view Transformers for real-time Map-view Semantic Segmentation},
-    author={Zhou, Brady and Kr{\"a}henb{\"u}hl, Philipp},
-    booktitle={CVPR},
-    year={2022}
-}
-```
+### **Acknoledgement**
+We would like to sinsere thank [CVT(CVPR2022)](https://github.com/bradyz/cross_view_transformers) for their awesome training pipeline, which makes our implementation much easier.

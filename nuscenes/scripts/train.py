@@ -60,8 +60,7 @@ def main(cfg):
         ModelCheckpoint(filename='model',
                         every_n_train_steps=cfg.experiment.checkpoint_interval),
 
-        VisualizationCallback(viz_fn, cfg.experiment.log_image_interval),
-        GitDiffCallback(cfg)
+        VisualizationCallback(viz_fn, cfg.experiment.log_image_interval)
     ]
 
     # Train
