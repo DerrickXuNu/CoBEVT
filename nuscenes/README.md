@@ -104,8 +104,8 @@ python scripts/train.py \
 For more information, see
 
 * `config/config.yaml` - base config
-* `config/model/cvt.yaml` - model architecture
-* `config/experiment/cvt_nuscenes_vehicle.yaml` - additional overrides
+* `config/model/cvt_pyramid_axial.yaml` - model architecture (CVT + Pyramid FAX)
+* `config/experiment/cvt_pyramid_axial_nuscenes_vehicle.yaml` - additional overrides
 
 ## <div align="center">**Additional Information**</div>
 
