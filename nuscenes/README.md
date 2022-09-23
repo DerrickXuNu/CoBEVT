@@ -74,9 +74,6 @@ python3 scripts/view_data.py \
 # <div align="center">**Training**</div>
 
 <div align="center">
-<a href="https://www.pytorchlightning.ai">
-<img src="https://raw.githubusercontent.com/PyTorchLightning/pytorch-lightning/master/docs/source/_static/images/logo.png" width="25%">
-</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://wandb.ai/site">
 <img src="https://raw.githubusercontent.com/wandb/client/master/.github/wb-logo-lightbg.png" width="25%">
