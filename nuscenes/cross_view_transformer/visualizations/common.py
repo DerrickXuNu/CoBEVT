@@ -37,14 +37,7 @@ def colorize(x, colormap=None):
     colormap
     """
     try:
-        colorization_array = 255*np.ones((x.shape[0], x.shape[1], 3),
-                                      dtype=np.uint8)
-        # colorization_array[x > 0] = np.array([0, 158, 255],
-        #                                             dtype=np.uint8)
-        colorization_array[x > 0] = np.array([90, 90, 90],
-                                                    dtype=np.uint8)
-        return colorization_array
-        #return (255 * get_cmap(colormap)(x)[..., :3]).astype(np.uint8)
+        return (255 * get_cmap(colormap)(x)[..., :3]).astype(np.uint8)
     except:
         pass
 
@@ -84,12 +77,12 @@ def resize(src, dst=None, shape=None, idx=0):
 class BaseViz:
     SEMANTICS = []
 
-    def __init__(self, label_indices=None, colormap='Greys'):
+    def __init__(self, label_indices=None, colormap='inferno'):
         self.label_indices = label_indices
         self.colors = get_colors(self.SEMANTICS)
         self.colormap = colormap
 
-    def visualize_pred(self, bev, pred, threshold=0.5):
+    def visualize_pred(self, bev, pred, threshold=None):
         """
         (c, h, w) torch float {0, 1}
         (c, h, w) torch float [0-1]
@@ -107,7 +100,7 @@ class BaseViz:
         if threshold is not None:
             pred = (pred > threshold).astype(np.float32)
 
-        result = colorize((255 * bev.squeeze(2)).astype(np.uint8), self.colormap)
+        result = colorize((255 * pred.squeeze(2)).astype(np.uint8), self.colormap)
 
         return result
 
