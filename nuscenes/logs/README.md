@@ -1,0 +1,1 @@
+If you would like to see the training log for the provided checkpoint, please email me at rxx3386@ucla.edu

@@ -31,7 +31,7 @@ class GitDiffCallback(pl.Callback):
 
     @rank_zero_only
     def on_fit_start(self, trainer: pl.Trainer, pl_module: pl.LightningModule) -> None:
-        diff = git.Repo(PROJECT_ROOT).git.diff()
+        #diff = git.Repo(PROJECT_ROOT).git.diff()
         cfg = OmegaConf.to_yaml(self.cfg)
 
-        log.info(TEMPLATE.format(diff=diff, cfg=cfg))
+        log.info(TEMPLATE.format(cfg=cfg))
