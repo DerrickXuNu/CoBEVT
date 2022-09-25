@@ -1,14 +1,8 @@
 from opencood.data_utils.datasets.camera_only.base_camera_dataset import BaseCameraDataset
-from opencood.data_utils.datasets.lidar_only.late_fusion_dataset import LateFusionDataset
-from opencood.data_utils.datasets.lidar_only.early_fusion_dataset import EarlyFusionDataset
-from opencood.data_utils.datasets.lidar_only.intermediate_fusion_dataset import IntermediateFusionDataset
 from opencood.data_utils.datasets.camera_only.late_fusion_dataset import CamLateFusionDataset
 from opencood.data_utils.datasets.camera_only.intermediate_fusion_dataset import CamIntermediateFusionDataset
 
 __all__ = {
-    'LateFusionDataset': LateFusionDataset,
-    'EarlyFusionDataset': EarlyFusionDataset,
-    'IntermediateFusionDataset': IntermediateFusionDataset,
     'BaseCameraDataset': BaseCameraDataset,
     'CamLateFusionDataset': CamLateFusionDataset,
     'CamIntermediateFusionDataset': CamIntermediateFusionDataset
