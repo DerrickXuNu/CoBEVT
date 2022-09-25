@@ -4,7 +4,7 @@ validate_dir: '/data/opv2v/validate'
 
 
 train_params:
-  batch_size: &batch_size 4
+  batch_size: &batch_size 1
   epoches: &epoches 151
   eval_freq: 5
   save_freq: 5

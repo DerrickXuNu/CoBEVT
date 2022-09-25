@@ -4,7 +4,7 @@ validate_dir: '/data/opv2v/validate'
 
 
 train_params:
-  batch_size: &batch_size 4
+  batch_size: &batch_size 1
   epoches: &epoches 151
   eval_freq: 5
   save_freq: 5
@@ -103,8 +103,8 @@ loss:
   args:
     target: *target
     d_weights: 75.0
-    s_weights: 5.0
-    l_weights: 10.0
+    s_weights: 2.0
+    l_weights: 4.0
     d_coe: 2.0
     s_coe: 1.0
 

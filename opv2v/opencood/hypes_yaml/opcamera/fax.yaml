@@ -1,6 +1,4 @@
 name: fax # only used for demonstration data api
-#root_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/train'
-#validate_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/validate'
 root_dir: '/data/opv2v/train'
 validate_dir: '/data/opv2v/validate'
 
