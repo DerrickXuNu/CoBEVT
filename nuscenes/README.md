@@ -104,7 +104,19 @@ For more information, see
 * `config/model/cvt_pyramid_axial.yaml` - model architecture (CVT + Pyramid FAX)
 * `config/experiment/cvt_pyramid_axial_nuscenes_vehicle.yaml` - additional overrides
 
+# <div align="center">**Benchmarking**</div>
+To benchmark the inference speed, run the following command:
+```bash
+python scripts/benchmark.py \
+  +experiment=cvt_pyramid_axial_nuscenes_vehicle
+  data.dataset_dir=/media/datasets/nuscenes \
+  data.labels_dir=/media/datasets/cvt_labels_nuscenes
+```
+
+
+
 ## <div align="center">**Additional Information**</div>
 
 ### **Acknoledgement**
 We would like to sinsere thank [CVT(CVPR2022)](https://github.com/bradyz/cross_view_transformers) for their awesome training pipeline, which makes our implementation much easier.
+c

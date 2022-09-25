@@ -131,3 +131,4 @@ dmypy.json
 *__pycache__*
 *outputs*
 *egg**
+*logs*

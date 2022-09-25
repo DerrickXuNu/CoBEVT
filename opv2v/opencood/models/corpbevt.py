@@ -4,6 +4,7 @@ Implementation of Brady Zhou's cross view transformer
 import einops
 import numpy as np
 import torch.nn as nn
+import torch
 from einops import rearrange
 from opencood.models.sub_modules.fax_modules import FAXModule
 from opencood.models.backbones.resnet_ms import ResnetEncoder

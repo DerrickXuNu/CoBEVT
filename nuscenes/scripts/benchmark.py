@@ -45,12 +45,14 @@ def main(cfg):
     with torch.cuda.amp.autocast(enabled=cfg.mixed_precision):
         with torch.no_grad():
             for _ in tqdm(range(1000+1)):
+                torch.cuda.synchronize()
                 start_time = time.time()
                 network(batch)
+                torch.cuda.synchronize()
                 duration = time.time()-start_time
                 time_list.append(duration)
 
-    print('average time: %f' % statistics.mean(time_list))
+    print('average time: %f ms' % statistics.mean(time_list))
 
 
 if __name__ == '__main__':

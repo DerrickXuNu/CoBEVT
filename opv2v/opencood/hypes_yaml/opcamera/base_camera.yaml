@@ -1,6 +1,6 @@
 name: base_camera # only used for demonstration data api
-root_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/test'
-validate_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/test'
+root_dir: '/data/opv2v/test'
+validate_dir: '/data/opv2v/test'
 
 
 train_params:

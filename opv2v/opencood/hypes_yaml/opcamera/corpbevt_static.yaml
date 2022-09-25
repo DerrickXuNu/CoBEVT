@@ -1,8 +1,6 @@
 name: corpbevt_static # only used for demonstration data api
-#root_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/train'
-#validate_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/validate'
-root_dir: '/home/jiaqi2/data/opv2v/train'
-validate_dir: '/home/jiaqi2/data/opv2v/validate'
+root_dir: '/data/opv2v/train'
+validate_dir: '/data/opv2v/validate'
 
 
 train_params:

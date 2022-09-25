@@ -1,6 +1,4 @@
 name: cross_view_transformer_disconet # only used for demonstration data api
-#root_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/train'
-#validate_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/validate'
 root_dir: '/media/ztu/seagate/open_cood/train'
 validate_dir: '/media/ztu/seagate/open_cood/validate'
 
