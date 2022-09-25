@@ -47,30 +47,3 @@ class CrossViewTransformer(nn.Module):
         output_dict = self.seg_head(x, b, l)
 
         return output_dict
-
-
-if __name__ == '__main__':
-    import os
-    import torch
-    from opencood.hypes_yaml.yaml_utils import load_yaml
-
-    os.environ['CUDA_VISIBLE_DEVICES'] = '1'
-
-    test_data = torch.rand(1, 2, 4, 512, 512, 3)
-    test_data = test_data.cuda()
-
-    extrinsic = torch.rand(1, 2, 4, 4, 4)
-    intrinsic = torch.rand(1, 2, 4, 3, 3)
-
-    extrinsic = extrinsic.cuda()
-    intrinsic = intrinsic.cuda()
-
-    params = load_yaml('../hypes_yaml/opcamera/cvt.yaml')
-
-    model = CrossViewTransformer(params['model']['args'])
-    model = model.cuda()
-    while True:
-        output = model({'inputs': test_data,
-                        'extrinsic': extrinsic,
-                        'intrinsic': intrinsic})
-        print('test_passed')
