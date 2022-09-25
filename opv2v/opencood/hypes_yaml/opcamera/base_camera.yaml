@@ -1,0 +1,41 @@
+name: base_camera # only used for demonstration data api
+root_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/test'
+validate_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/test'
+
+
+train_params:
+  batch_size: &batch_size 4
+  epoches: 22
+  eval_freq: 1
+  save_freq: 1
+
+fusion:
+  core_method: 'CamLateFusionDataset' # LateFusionDataset, EarlyFusionDataset, IntermediateFusionDataset supported
+  args: []
+
+
+data_augment: []
+add_data_extension: ['bev_dynamic.png', 'bev_static.png', 'bev_lane.png', 'bev_visibility.png', 'bev_visibility_corp.png']
+
+# preprocess-related
+preprocess:
+  # options: BasePreprocessor, VoxelPreprocessor, BevPreprocessor
+  core_method: 'RgbPreprocessor'
+  args:
+    bgr2rgb: true
+    resize_x: 512
+    resize_y: 512
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+  # object evaluation range
+  cav_lidar_range: &cav_lidar [-50, -50, -3, 50, 50, 1]
+
+
+# anchor box related
+postprocess:
+  core_method: 'CameraBevPostprocessor' # VoxelPostprocessor, BevPostprocessor supported
+  anchor_args:
+    cav_lidar_range: *cav_lidar
+  order: 'hwl' # hwl or lwh
+  max_num: 100 # maximum number of objects in a single frame. use this number to make sure different frames has the same dimension in the same batch
+  nms_thresh: 0.15

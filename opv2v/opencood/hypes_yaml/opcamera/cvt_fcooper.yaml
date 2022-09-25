@@ -1,0 +1,114 @@
+name: cross_view_transformer_fcooper # only used for demonstration data api
+#root_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/train'
+#validate_dir: '/home/runshengxu/project/OpenCOOD/opv2v_data_dumping/validate'
+root_dir: '/data/opv2v/train'
+validate_dir: '/data/opv2v/validate'
+
+
+train_params:
+  batch_size: &batch_size 1
+  epoches: &epoches 151
+  eval_freq: 5
+  save_freq: 5
+  max_cav: &max_cav 5
+  visible: true
+
+
+fusion:
+  core_method: 'CamIntermediateFusionDataset' # LateFusionDataset, EarlyFusionDataset, IntermediateFusionDataset supported
+  args: []
+
+
+data_augment: []
+add_data_extension: ['bev_dynamic.png', 'bev_static.png', 'bev_lane.png', 'bev_visibility.png', 'bev_visibility_corp.png']
+
+# preprocess-related
+preprocess:
+  # options: BasePreprocessor, VoxelPreprocessor, BevPreprocessor
+  core_method: 'RgbPreprocessor'
+  args:
+    bgr2rgb: true
+    resize_x: &image_width 512
+    resize_y: &image_height 512
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+  # object evaluation range
+  cav_lidar_range: &cav_lidar [-50, -50, -3, 50, 50, 1]
+
+
+# anchor box related
+postprocess:
+  core_method: 'CameraBevPostprocessor' # VoxelPostprocessor, BevPostprocessor supported
+  anchor_args:
+    cav_lidar_range: *cav_lidar
+  order: 'hwl' # hwl or lwh
+  max_num: 100 # maximum number of objects in a single frame. use this number to make sure different frames has the same dimension in the same batch
+  nms_thresh: 0.15
+
+model:
+  core_method: cross_view_transformer_fcooper
+  args:
+    max_cav: *max_cav
+    target: &target 'dynamic' # dynamic, static or both
+    encoder:
+      num_layers: 34
+      pretrained: true
+      image_width: *image_width
+      image_height: *image_height
+      id_pick: [1, 3]
+
+    decoder:
+      input_dim: 128
+      num_layer: 3
+      num_ch_dec: &decoder_block [32, 64, 128]
+
+    sttf: &sttf
+      resolution: 0.390625 # m/pixel
+      downsample_rate: 8
+      use_roi_mask: true
+    cvm:
+      dim: 128 # b, d, h w from resenet -> b 256 h w
+      middle: [2, 2] # middle conv
+      bev_embedding:
+        sigma: 1.0
+        bev_height: 256
+        bev_width: 256
+        h_meters: 100
+        w_meters: 100
+        offset: 0.0
+        decoder_blocks: *decoder_block
+
+      cross_view: #cross_view attention
+        image_height: *image_height
+        image_width: *image_width
+        no_image_features: False
+        skip: True
+        heads: 4
+        dim_head: 32
+        qkv_bias: True
+
+    seg_head_dim: 32
+    output_class: 2
+
+loss:
+  core_method: vanilla_seg_loss
+  args:
+    target: *target
+    d_weights: 75.0
+    s_weights: 15.0
+    d_coe: 2.0
+    s_coe: 0.0
+
+optimizer:
+  core_method: AdamW
+  lr: 2e-4
+  args:
+    eps: 1e-10
+    weight_decay: 1e-2
+
+lr_scheduler:
+    core_method: cosineannealwarm #step, multistep, Exponential and cosineannealwarm support
+    epoches: *epoches
+    warmup_lr: 2e-5
+    warmup_epoches: 10
+    lr_min: 5e-6
