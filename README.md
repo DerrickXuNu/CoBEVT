@@ -48,6 +48,32 @@ The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer t
 :point_right: [nuScenes Users](nuscenes/README.md) <br/>
 :point_right: [OPV2V Users](opv2v/README.md)
 
+
+## Models
+
+<details>
+  <summary><strong>Fused Axial Attention Module (FAX)</strong> (click to expand) </summary>
+
+<img src = "https://user-images.githubusercontent.com/43280278/192188069-44381995-7d0f-43fb-aded-68d62595b2d4.png" width="800">
+
+</details>
+
+<details>
+  <summary><strong>SinBEVT and FuseBEVT</strong> (click to expand) </summary>
+
+<img src = "https://user-images.githubusercontent.com/43280278/192188116-2b3fd013-b8fc-4d79-a5dd-5eb88d09e622.png" width="800">
+
+</details>
+
+<details>
+  <summary><strong>CoBEVT Architecture</strong> (click to expand) </summary>
+
+<img src = "images/CorpBEVT_Overview-1.png" width="800">
+
+</details>
+
+
+
 ## Results
 
 <details>
