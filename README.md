@@ -59,7 +59,7 @@ The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer t
 </details>
 
 <details>
-  <summary><strong>SinBEVT and FuseBEVT</strong> (click to expand) </summary>
+  <summary><strong>SinBEVT (single-agent multi-view fusion) and FuseBEVT (multi-agent BEV fusion) </strong> (click to expand) </summary>
 
 <img src = "https://user-images.githubusercontent.com/43280278/192188116-2b3fd013-b8fc-4d79-a5dd-5eb88d09e622.png" width="800">
 
