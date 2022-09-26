@@ -48,6 +48,21 @@ The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer t
 :point_right: [nuScenes Users](nuscenes/README.md) <br/>
 :point_right: [OPV2V Users](opv2v/README.md)
 
+## Results
+
+<details>
+  <summary><strong>Main results (OPV2V camera, LiDAR, and nuScenes.)</strong> (click to expand) </summary>
+
+<img src = "https://user-images.githubusercontent.com/43280278/192186838-8b42605b-9cb0-4f3e-9a44-615ec158ce37.png" width="800">
+</details>
+
+<details>
+  <summary><strong>Ablation study</strong> (click to expand) </summary>
+
+<img src = "https://user-images.githubusercontent.com/43280278/192186995-0fa0b1dd-b5a8-4125-af39-17a79ce0de0e.png" width="800">
+</details>
+
+
 ## Citation
  ```bibtex
 @inproceedings{xu2022cobevt,
