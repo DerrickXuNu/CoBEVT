@@ -58,7 +58,7 @@ The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer t
 @article{xu2022v2x,
   title={V2X-ViT: Vehicle-to-everything cooperative perception with vision transformer},
   author={Xu, Runsheng and Xiang, Hao and Tu, Zhengzhong and Xia, Xin and Yang, Ming-Hsuan and Ma, Jiaqi},
-  journal={arXiv preprint arXiv:2203.10638},
+  journal={Proceedings of the European Conference on Computer Vision (ECCV)},
   year={2022}
 }
 @inproceedings{tu2022maxim,
@@ -71,7 +71,7 @@ The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer t
 @article{tu2022maxvit,
   title={Maxvit: Multi-axis vision transformer},
   author={Tu, Zhengzhong and Talebi, Hossein and Zhang, Han and Yang, Feng and Milanfar, Peyman and Bovik, Alan and Li, Yinxiao},
-  journal={arXiv preprint arXiv:2204.01697},
+  journal={Proceedings of the European Conference on Computer Vision (ECCV)},
   year={2022}
 }
 ```
