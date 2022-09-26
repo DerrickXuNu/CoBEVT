@@ -55,6 +55,25 @@ The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer t
   title = {CoBEVT: Cooperative Bird's Eye View Semantic Segmentation with Sparse Transformers},
   booktitle={Conference on Robot Learning (CoRL)},
   year = {2022}}
+@article{xu2022v2x,
+  title={V2X-ViT: Vehicle-to-everything cooperative perception with vision transformer},
+  author={Xu, Runsheng and Xiang, Hao and Tu, Zhengzhong and Xia, Xin and Yang, Ming-Hsuan and Ma, Jiaqi},
+  journal={arXiv preprint arXiv:2203.10638},
+  year={2022}
+}
+@inproceedings{tu2022maxim,
+  title={Maxim: Multi-axis mlp for image processing},
+  author={Tu, Zhengzhong and Talebi, Hossein and Zhang, Han and Yang, Feng and Milanfar, Peyman and Bovik, Alan and Li, Yinxiao},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={5769--5780},
+  year={2022}
+}
+@article{tu2022maxvit,
+  title={Maxvit: Multi-axis vision transformer},
+  author={Tu, Zhengzhong and Talebi, Hossein and Zhang, Han and Yang, Feng and Milanfar, Peyman and Bovik, Alan and Li, Yinxiao},
+  journal={arXiv preprint arXiv:2204.01697},
+  year={2022}
+}
 ```
 
 ## Acknowledgement
@@ -62,3 +81,4 @@ CoBEVT is build upon [OpenCOOD](https://github.com/DerrickXuNu/OpenCOOD), which 
 
 Our nuScenes experiments used the training pipeline in [CVT(CVPR2022)](https://github.com/bradyz/cross_view_transformers).
 
+CoBEVT is partly inspired by [V2X-ViT](https://github.com/DerrickXuNu/v2x-vit), [MAXIM](https://github.com/google-research/maxim) and [MaxViT](https://github.com/google-research/maxvit).
