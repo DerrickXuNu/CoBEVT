@@ -45,8 +45,8 @@ Our CoBEVT can also be used for multi-agent BEV map prediction.
 ## Installation
 The pipeline for nuScenes dataset and OPV2V dataset is different. Please refer to the specific folder for more details based on your research purpose.
 
-:point_right: [nuScenes Users](nuscenes/README.md) <br/>
-:point_right: [OPV2V Users](opv2v/README.md)
+:point_right: [nuScenes Users](nuscenes) <br/>
+:point_right: [OPV2V Users](opv2v)
 
 
 ## Models
